@@ -2,28 +2,34 @@ package com.felps.workshop.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-
+@Entity
 public class User implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private String email;
 	private String phone;
-	private String passoword;
+	private String password;
 	
 	public User() {
 	}
 	
-	public User(Long id, String name, String email, String phone, String passoword) {
+	public User(Long id, String name, String email, String phone, String password) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.phone = phone;
-		this.passoword = passoword;
+		this.password = password;
 	}
 
 	public Long getId() {
@@ -59,11 +65,11 @@ public class User implements Serializable {
 	}
 
 	public String getPassoword() {
-		return passoword;
+		return password;
 	}
 
 	public void setPassoword(String passoword) {
-		this.passoword = passoword;
+		this.password = passoword;
 	}
 
 	@Override
