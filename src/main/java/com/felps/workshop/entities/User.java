@@ -78,12 +78,12 @@ public class User implements Serializable {
 		this.phone = phone;
 	}
 
-	public String getPassoword() {
+	public String getPassword() {
 		return password;
 	}
 
-	public void setPassoword(String passoword) {
-		this.password = passoword;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 	public List<Order> getOrders() {
